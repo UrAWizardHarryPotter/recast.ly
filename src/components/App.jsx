@@ -1,5 +1,6 @@
 import VideoList from './VideoList.js';
 var App = () => (
+
   <div>
     <nav className="navbar">
       <div className="col-md-6 offset-md-3">
