@@ -1,4 +1,3 @@
 // TODO: Render the `App` component to the DOM
 import App from './components/App.js';
-
-var test;
+ReactDOM.render(<App />, document.getElementById('app'));
