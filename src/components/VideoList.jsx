@@ -1,35 +1,17 @@
-import exampleVideoData from '../data/exampleVideoData.js';
 import VideoListEntry from './VideoListEntry.js';
 
-class VideoList extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
-  render() {
-    const videoData = exampleVideoData;
-
-    return (
-      <ul className="individual_list">
-        {videoData.map(video =>
-
-          <VideoListEntry videoObj={video} />
-
-        )}
-      </ul>
-    );
-  }
-}
-
-// var VideoList = () => (
-//   <div className="video-list">
-//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
-//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
-//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
-//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
-//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
-//   </div>
-// );
+var VideoList = ({ video, handleVideoListEntryTitleClick }) => (
+  <div className="video-list">
+    {videos.map((video) => (
+      <VideoListEntry
+        video={video}
+        key={video.id.videoId}
+        handleVideoListEntryTitleClick={handleVideoListEntryTitleClick}
+      />
+    )
+    )}
+  </div>
+);
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
